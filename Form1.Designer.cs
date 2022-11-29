@@ -94,7 +94,7 @@ namespace PasswordGenerator
             this.infoText.Name = "infoText";
             this.infoText.Size = new System.Drawing.Size(372, 13);
             this.infoText.TabIndex = 3;
-            this.infoText.Text = "Welcome to Password Gernerator v0.1";
+            this.infoText.Text = "Welcome to Password Generator v0.1";
             this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.infoText.Click += new System.EventHandler(this.infoText_Click);
             // 
