@@ -1,6 +1,8 @@
 # Password Generator #
 
 > A lightweight tool to generate Passwords for you.
+>
+>This software is currently only avaible in german language, a english version will released soon.
 
 ## Installation ##
 
