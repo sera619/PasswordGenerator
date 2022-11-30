@@ -139,7 +139,7 @@ namespace PasswordGenerator
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Gebe eine Passwortlänge ein. (max. 50)";
+            this.label1.Text = "Gebe eine Passwortlänge ein. (max. 25)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkboxSymbol
@@ -172,7 +172,7 @@ namespace PasswordGenerator
             this.lengthedit.Font = new System.Drawing.Font("Impact", 8.75F);
             this.lengthedit.Location = new System.Drawing.Point(285, 121);
             this.lengthedit.Maximum = new decimal(new int[] {
-            40,
+            25,
             0,
             0,
             0});
