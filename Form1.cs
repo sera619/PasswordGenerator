@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PasswordGenerator
@@ -13,7 +7,7 @@ namespace PasswordGenerator
     public partial class mainUI : Form
     {
         private int passwordLength = 0;
-        private string symbols= "!§$%&=?@";
+        private string symbols = "!§$%&=?@";
         private string numbers = "0123456789";
         private bool allowNums = false;
         private bool allowSymbols = false;
@@ -22,7 +16,7 @@ namespace PasswordGenerator
         {
             InitializeComponent();
         }
-        
+
         public string CreatePassword(int length)
         {
             string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -40,6 +34,8 @@ namespace PasswordGenerator
             {
                 res.Append(valid[rnd.Next(valid.Length)]);
             }
+            CopyButton.Enabled = true;
+            CopyButton.Visible = true;
             return res.ToString();
         }
 
@@ -50,7 +46,10 @@ namespace PasswordGenerator
 
         private void mainUI_Load(object sender, EventArgs e)
         {
-            errorMsgLabel.Text = "";
+            errorMessage("");
+            CopyButton.Enabled = false;
+            CopyButton.Visible = false;
+
         }
 
         private void infoText_Click(object sender, EventArgs e)
@@ -60,15 +59,12 @@ namespace PasswordGenerator
 
         private void generateBTN_Click(object sender, EventArgs e)
         {
-            if(passwordLength == 0)
+            if (passwordLength == 0)
             {
                 errorMessage("Passwortlänge darf nicht 0 sein. Bitte wähle die Länge des Passworts!");
+                return;
             }
             passwordText.Text = CreatePassword(passwordLength);
-        }
-
-        private void passwordText_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -84,7 +80,7 @@ namespace PasswordGenerator
             {
                 errorMsgLabel.Text = "";
             }
-            passwordLength = (int) lengthedit.Value;
+            passwordLength = (int)lengthedit.Value;
         }
 
         private void checkboxNumber_CheckedChanged(object sender, EventArgs e)
@@ -97,12 +93,12 @@ namespace PasswordGenerator
             {
                 allowNums = false;
             }
-                 
+
         }
 
         private void checkboxSymbol_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkboxSymbol.Checked == true)
+            if (checkboxSymbol.Checked == true)
             {
                 allowSymbols = true;
             }
@@ -115,6 +111,11 @@ namespace PasswordGenerator
         private void moreButton_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.github.com/sera619");
+        }
+
+        private void CopyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(passwordText.Text);
         }
     }
 }

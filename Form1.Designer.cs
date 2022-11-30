@@ -44,13 +44,15 @@ namespace PasswordGenerator
             this.label2 = new System.Windows.Forms.Label();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.moreButton = new System.Windows.Forms.Button();
+            this.VersionLabel = new System.Windows.Forms.Label();
+            this.CopyButton = new System.Windows.Forms.Button();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lengthedit)).BeginInit();
             this.SuspendLayout();
             // 
             // generateBTN
             // 
-            this.generateBTN.Location = new System.Drawing.Point(102, 229);
+            this.generateBTN.Location = new System.Drawing.Point(96, 279);
             this.generateBTN.Name = "generateBTN";
             this.generateBTN.Size = new System.Drawing.Size(75, 23);
             this.generateBTN.TabIndex = 0;
@@ -60,7 +62,7 @@ namespace PasswordGenerator
             // 
             // exitBTN
             // 
-            this.exitBTN.Location = new System.Drawing.Point(183, 229);
+            this.exitBTN.Location = new System.Drawing.Point(177, 279);
             this.exitBTN.Name = "exitBTN";
             this.exitBTN.Size = new System.Drawing.Size(75, 23);
             this.exitBTN.TabIndex = 1;
@@ -73,8 +75,9 @@ namespace PasswordGenerator
             this.mainHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainHeader.AutoEllipsis = true;
             this.mainHeader.AutoSize = true;
-            this.mainHeader.Font = new System.Drawing.Font("Ethnocentric", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainHeader.Font = new System.Drawing.Font("Ethnocentric", 15F);
             this.mainHeader.ForeColor = System.Drawing.SystemColors.Info;
             this.mainHeader.Location = new System.Drawing.Point(3, 0);
             this.mainHeader.Name = "mainHeader";
@@ -94,7 +97,7 @@ namespace PasswordGenerator
             this.infoText.Name = "infoText";
             this.infoText.Size = new System.Drawing.Size(372, 13);
             this.infoText.TabIndex = 3;
-            this.infoText.Text = "Welcome to Password Generator v0.1";
+            this.infoText.Text = "Willkommen beim Passwort Generator";
             this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.infoText.Click += new System.EventHandler(this.infoText_Click);
             // 
@@ -111,7 +114,7 @@ namespace PasswordGenerator
             this.headerPanel.Location = new System.Drawing.Point(21, 14);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(382, 54);
+            this.headerPanel.Size = new System.Drawing.Size(378, 54);
             this.headerPanel.TabIndex = 4;
             // 
             // label3
@@ -120,7 +123,7 @@ namespace PasswordGenerator
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Location = new System.Drawing.Point(3, 33);
             this.label3.Name = "label3";
@@ -136,7 +139,7 @@ namespace PasswordGenerator
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Gebe eine Passwortlänge ein";
+            this.label1.Text = "Gebe eine Passwortlänge ein. (max. 50)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkboxSymbol
@@ -165,20 +168,23 @@ namespace PasswordGenerator
             // 
             // lengthedit
             // 
+            this.lengthedit.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lengthedit.Font = new System.Drawing.Font("Impact", 8.75F);
             this.lengthedit.Location = new System.Drawing.Point(285, 121);
             this.lengthedit.Maximum = new decimal(new int[] {
-            25,
+            40,
             0,
             0,
             0});
             this.lengthedit.Name = "lengthedit";
-            this.lengthedit.Size = new System.Drawing.Size(49, 20);
+            this.lengthedit.Size = new System.Drawing.Size(49, 22);
             this.lengthedit.TabIndex = 10;
+            this.lengthedit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lengthedit.ValueChanged += new System.EventHandler(this.lengthedit_ValueChanged);
             // 
             // errorMsgLabel
             // 
-            this.errorMsgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMsgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.errorMsgLabel.ForeColor = System.Drawing.Color.Red;
             this.errorMsgLabel.Location = new System.Drawing.Point(21, 94);
             this.errorMsgLabel.Name = "errorMsgLabel";
@@ -201,20 +207,20 @@ namespace PasswordGenerator
             // 
             this.passwordText.BackColor = System.Drawing.SystemColors.MenuText;
             this.passwordText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.passwordText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.passwordText.Location = new System.Drawing.Point(26, 191);
+            this.passwordText.Location = new System.Drawing.Point(21, 230);
             this.passwordText.Name = "passwordText";
             this.passwordText.ReadOnly = true;
-            this.passwordText.Size = new System.Drawing.Size(375, 15);
+            this.passwordText.Size = new System.Drawing.Size(378, 13);
             this.passwordText.TabIndex = 13;
             this.passwordText.TabStop = false;
-            this.passwordText.Text = "Your new Password here";
+            this.passwordText.Text = "Dein neues Passwort erscheint hier.";
             this.passwordText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // moreButton
             // 
-            this.moreButton.Location = new System.Drawing.Point(264, 229);
+            this.moreButton.Location = new System.Drawing.Point(258, 279);
             this.moreButton.Name = "moreButton";
             this.moreButton.Size = new System.Drawing.Size(75, 23);
             this.moreButton.TabIndex = 14;
@@ -222,11 +228,34 @@ namespace PasswordGenerator
             this.moreButton.UseVisualStyleBackColor = true;
             this.moreButton.Click += new System.EventHandler(this.moreButton_Click);
             // 
+            // VersionLabel
+            // 
+            this.VersionLabel.AutoSize = true;
+            this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
+            this.VersionLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.VersionLabel.Location = new System.Drawing.Point(12, 302);
+            this.VersionLabel.Name = "VersionLabel";
+            this.VersionLabel.Size = new System.Drawing.Size(54, 9);
+            this.VersionLabel.TabIndex = 15;
+            this.VersionLabel.Text = "Version 0.3";
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.Location = new System.Drawing.Point(177, 251);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(75, 23);
+            this.CopyButton.TabIndex = 16;
+            this.CopyButton.Text = "Copy";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
+            // 
             // mainUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(423, 278);
+            this.ClientSize = new System.Drawing.Size(419, 324);
+            this.Controls.Add(this.CopyButton);
+            this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.moreButton);
             this.Controls.Add(this.passwordText);
             this.Controls.Add(this.label2);
@@ -244,7 +273,7 @@ namespace PasswordGenerator
             this.MinimizeBox = false;
             this.Name = "mainUI";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Password Generator v0.1";
+            this.Text = "Password Generator";
             this.Load += new System.EventHandler(this.mainUI_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
@@ -270,6 +299,8 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox passwordText;
         private System.Windows.Forms.Button moreButton;
+        private System.Windows.Forms.Label VersionLabel;
+        private System.Windows.Forms.Button CopyButton;
     }
 }
 

@@ -118,6 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="generateBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 278</value>
+  </data>
+  <data name="exitBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 278</value>
+  </data>
+  <data name="headerPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 54</value>
+  </data>
+  <data name="lengthedit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>AcmeFont, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lengthedit.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="lengthedit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 21</value>
+  </data>
+  <data name="lengthedit.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="passwordText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="passwordText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 210</value>
+  </data>
+  <data name="passwordText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 19</value>
+  </data>
+  <data name="moreButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 278</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>414, 328</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIADbNwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAN6JJ
@@ -360,5 +397,8 @@
         VbM4AsCoIigyJRYiB61BxWABK4YayKQIo6rsV6c7UXnIhFoxkYyJkQfVcodLdFemSC3qk9Lnfydjr1/u
         MAbUQZCBsCAEgaIqLLndr+M7Df8f/dwxbfjVcpwAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Password Generator</value>
   </data>
 </root>
